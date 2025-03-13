@@ -2,6 +2,7 @@ import { ApplicationRef, ChangeDetectionStrategy, Component, inject, OnInit, sig
 import { PokemonListComponent } from "../../pokemons/components/pokemon-list/pokemon-list.component";
 import { PokemonListSkeletonComponent } from "./ui/pokemon-list-skeleton/pokemon-list-skeleton.component";
 import { log } from 'console';
+import { PokemonsService } from '../../pokemons/services/pokemons.service';
 
 @Component({
   selector: 'pokemons-page',
@@ -10,6 +11,8 @@ import { log } from 'console';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class PokemonsPageComponent implements OnInit {
+
+  private pokemonsService = inject(PokemonsService)
 
   // public isLoading = signal(true)
 
@@ -21,8 +24,18 @@ export default class PokemonsPageComponent implements OnInit {
   // })
 
   ngOnInit(): void {
+    this.loadPokemons();
     // setTimeout(() => {
     //   this.isLoading.set(false)
     // }, 5000)
+  }
+
+  loadPokemons( page = 0 ){
+    this.pokemonsService.loadPage(page)
+    .subscribe(pokemons => {
+
+      console.log('On init');
+
+    })
   }
 }
