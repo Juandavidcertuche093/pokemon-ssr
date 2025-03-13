@@ -31,7 +31,7 @@ export class PokemonsService {
 
       }),
 
-      tap(console.log)
+      // tap(console.log)
     )
   }
 
