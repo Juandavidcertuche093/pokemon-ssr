@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './pricing.component.html'
 })
-export class PricingComponent {
+export default class PricingComponent {
 
 }
