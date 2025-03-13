@@ -1,9 +1,10 @@
 [build]
-  command = "ng build && ng run your-angular-project:server" # Reemplaza "your-angular-project" por el nombre correcto
-  publish = "dist/browser"
+  command = "ng build && ng run pokemon-ssr-jdc:server"
+  publish = "dist/pokemon-ssr-jdc/browser"
   functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
