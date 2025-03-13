@@ -15,10 +15,7 @@ export const routes: Routes = [
   },
 
   {
-    path:'**',
-    redirectTo: () => {
-
-      return 'about'
-    }
+    path: '**', // Ruta comodín para cualquier ruta no definida
+    redirectTo: 'about' // Redirige a 'about' como cadena de texto
   }
 ];
