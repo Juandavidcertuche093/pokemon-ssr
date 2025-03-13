@@ -1,10 +1,11 @@
-import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pricing',
   imports: [],
-  templateUrl: './pricing.component.html'
+  templateUrl: './pricing.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class PricingComponent implements OnInit {
 

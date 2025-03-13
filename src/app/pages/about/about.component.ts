@@ -1,10 +1,11 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
   imports: [],
-  templateUrl: './about.component.html'
+  templateUrl: './about.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class AboutComponent implements OnInit {
 
