@@ -1,0 +1,9 @@
+[build]
+  command = "ng build && ng run your-angular-project:server" # Reemplaza "your-angular-project" por el nombre correcto
+  publish = "dist/browser"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
