@@ -14,6 +14,8 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
+
+
 /**
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.
@@ -50,6 +52,13 @@ app.use('/**', (req, res, next) => {
 });
 
 /**
+ * Función getPrerenderParams para generar rutas dinámicas
+ */
+// export function getPrerenderParams(): { id: string }[] {
+//   return Array.from({ length: 10 }, (_, i) => ({ id: (i + 1).toString() }));
+// }
+
+/**
  * Start the server if this module is the main entry point.
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
@@ -59,4 +68,7 @@ if (isMainModule(import.meta.url)) {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
+
+
+
 

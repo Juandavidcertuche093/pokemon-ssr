@@ -7,7 +7,8 @@ export const routes: Routes = [
   },
   {
     path:'pokemons/:id',
-    loadComponent: () => import('./pages/pokemon-information/pokemon-information.component')
+    loadComponent: () => import('./pages/pokemon-information/pokemon-information.component'),
+    data: { renderMode: 'ssr' } // Evita prerenderizado, usa SSR dinámico
   },
   {
     path:'about',
